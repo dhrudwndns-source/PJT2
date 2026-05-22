@@ -1,0 +1,125 @@
+/* Global Text Word-Break for Korean */
+body, h1, h2, h3, h4, h5, h6, p, a, span {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* Custom Cursor */
+#custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: #FF5722;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+  box-shadow: 0 0 10px #FF5722, 0 0 20px #FF5722;
+}
+
+#custom-cursor.hovered {
+  width: 40px;
+  height: 40px;
+  background-color: #F9F6F0;
+  box-shadow: 0 0 15px #F9F6F0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0B0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A1A18;
+  border: 2px solid #0B0B0A;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5722;
+}
+
+/* Neon Glow Button & Hover Effects */
+#btn-waiting-header, #btn-naver-map, #btn-waiting-main {
+  box-shadow: 0 0 5px rgba(255, 87, 34, 0);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hero Scroll Down Line Keyframe */
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animate-scroll-indicator {
+  animation: scroll-down 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+/* Menu Scroll Styles */
+.horizontal-scroll-container {
+  width: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+.horizontal-scroll-track {
+  will-change: transform;
+}
+
+
+
+/* Marquee / Ticker track animation support */
+.ticker-container {
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.ticker-track-left, .ticker-track-right {
+  display: flex;
+  width: max-content;
+}
+
+/* Card hover transition for GSAP compatibility */
+.card-hover-transition {
+  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hide scrollbars utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Styled Floating Japanese Characters (Kyoto Neon Outline Style) */
+.floating-neon-char {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 900;
+  color: #FF5722; /* theme orange-red */
+  -webkit-text-stroke: 1.5px #F9F6F0; /* theme cream */
+  paint-order: stroke fill;
+  text-shadow: 0 0 8px rgba(255, 87, 34, 0.3);
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+

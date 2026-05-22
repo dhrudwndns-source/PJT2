@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>다니소바 | 단 한 입으로 기억되는 감칠맛의 정점</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="의왕역 부곡시장길의 대표 숨은 맛집, 다니소바. 72시간 숙성 자가제면과 비법 민찌 소스로 완성한 감칠맛의 정점을 느껴보세요.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="다니소바 - 마제소바 전문점">
+  <meta property="og:description" content="단 한 입으로 기억되는 감칠맛의 정점. 다니소바만의 특제 소스와 다시마 식초, 오이메시의 황황한 마무리를 제안합니다.">
+  <meta property="og:image" content="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231028_278/1698473091338pQySi_JPEG/%C7%AE%C5%E4%C7%CE_%28%C4%AB%B6%F3%C0%CC%29_%B8%B6%C1%A6%BC%D2%B9%D9.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://ssl.pstatic.net/static/maps/assets/icons/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500;700&family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dani-black': '#0B0B0A',
+            'dani-cream': '#F9F6F0',
+            'dani-orange': '#FF5722',
+            'dani-gray': '#252523',
+            'dani-card': '#333330',
+          },
+          fontFamily: {
+            sans: ['Noto Sans KR', 'sans-serif'],
+            outfit: ['Outfit', 'sans-serif'],
+            jp: ['Noto Serif JP', 'serif'],
+          },
+          boxShadow: {
+            'neon-orange': '0 0 15px rgba(255, 87, 34, 0.4), 0 0 30px rgba(255, 87, 34, 0.2)',
+            'neon-cream': '0 0 15px rgba(249, 246, 240, 0.2), 0 0 30px rgba(249, 246, 240, 0.1)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Base Stylesheet Link -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- GSAP & ScrollTrigger & Lenis CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+</head>
+<body class="bg-dani-black text-dani-cream font-sans overflow-x-hidden antialiased">
+
+  <!-- Custom Glow Cursor (Kyoto Neon Dark Mood) -->
+  <div id="custom-cursor" class="hidden md:block"></div>
+
+  <!-- Header Navigation -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-dani-black/80 backdrop-blur-md border-b border-dani-cream/10 transition-all duration-300 py-3 px-4 md:py-4 md:px-12 flex justify-between items-center">
+    <a href="#" class="flex items-center gap-1.5 md:gap-2 group">
+      <img src="./logo.png" alt="" class="w-7 h-7 md:w-8 md:h-8 rounded-full object-cover border border-dani-cream/20 group-hover:border-dani-orange transition-colors">
+      <span class="font-outfit font-extrabold text-lg md:text-2xl tracking-widest text-dani-cream group-hover:text-dani-orange transition-colors">
+        DANISOBA
+      </span>
+      <span class="font-jp text-[10px] md:text-xs text-dani-orange border border-dani-orange/30 px-1.5 py-0.5 rounded ml-1 tracking-wider hidden sm:inline-block">
+        ダニそば
+      </span>
+    </a>
+    
+    <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-widest text-dani-cream/80">
+      <a href="#hero" class="hover:text-dani-orange transition-colors">HOME</a>
+      <a href="#menu" class="hover:text-dani-orange transition-colors">SIGNATURE MENU</a>
+      <a href="#howto" class="hover:text-dani-orange transition-colors">3-STEPS</a>
+      <a href="#reviews" class="hover:text-dani-orange transition-colors">REAL REVIEWS</a>
+      <a href="#contact" class="hover:text-dani-orange transition-colors">LOCATION</a>
+      <a href="#franchise" class="hover:text-dani-orange transition-colors">FRANCHISE</a>
+    </nav>
+
+    <div class="flex items-center gap-2 md:gap-3">
+      <a href="https://www.instagram.com/danis0ba/" target="_blank"
+         id="btn-instagram-header"
+         aria-label="Instagram"
+         class="p-1.5 md:p-2 border border-dani-cream/20 rounded-full text-dani-cream hover:border-dani-orange hover:text-dani-orange hover:shadow-neon-orange transition-all duration-300 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 md:w-4 md:h-4">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <a href="https://map.naver.com/p/search/%EB%8B%A4%EB%8B%88%EC%86%8C%EB%B0%94/place/1767231413" target="_blank" 
+         id="btn-naver-map-header"
+         class="px-3 py-1.5 md:px-4 md:py-2 border border-dani-orange/50 rounded-full text-[10px] md:text-xs font-semibold text-dani-orange tracking-widest hover:bg-dani-orange hover:text-dani-black hover:shadow-neon-orange transition-all duration-300">
+        NAVER MAP
+      </a>
+    </div>
+  </header>
+
+  <!-- Section 1: Hero -->
+  <section id="hero" class="relative min-h-screen pt-24 pb-8 md:pt-28 md:pb-16 flex flex-col items-center justify-start md:justify-center overflow-hidden px-6 md:px-12">
+    <!-- Floating Japanese Typography Background (Full words "ダニそば") -->
+    <div id="hero-bg-graphic-container" class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+      <div class="floating-neon-char absolute top-[12%] left-[5%] text-4xl md:text-5xl -rotate-6 opacity-0">ダニそば</div>
+      <div class="floating-neon-char absolute top-[8%] right-[10%] text-5xl md:text-7xl rotate-6 opacity-0">ダニそば</div>
+      <div class="floating-neon-char absolute top-[24%] left-[30%] text-3xl md:text-4xl -rotate-12 opacity-0">ダニそば</div>
+      <div class="floating-neon-char absolute top-[42%] left-[8%] text-5xl md:text-6xl rotate-10 opacity-0">ダニそば</div>
+      <div class="floating-neon-char absolute top-[38%] right-[5%] text-4xl md:text-5xl -rotate-6 opacity-0">ダニそば</div>
+      <div class="floating-neon-char absolute top-[55%] right-[25%] text-3xl md:text-4xl rotate-8 opacity-0">ダニそば</div>
+      <div class="floating-neon-char absolute bottom-[30%] left-[12%] text-5xl md:text-7xl -rotate-10 opacity-0">ダニそば</div>
+      <div class="floating-neon-char absolute bottom-[25%] right-[15%] text-4xl md:text-5xl rotate-12 opacity-0">ダニそば</div>
+      <div class="floating-neon-char absolute bottom-[10%] left-[5%] text-3xl md:text-4xl -rotate-15 opacity-0">ダニそば</div>
+      <div class="floating-neon-char absolute bottom-[8%] right-[8%] text-5xl md:text-6xl rotate-6 opacity-0">ダニそば</div>
+    </div>
+
+    <!-- Soft radial glowing backdrop -->
+    <div class="absolute w-[600px] h-[600px] rounded-full bg-dani-orange/5 blur-[120px] pointer-events-none z-0"></div>
+
+    <div class="max-w-5xl w-full flex flex-col md:flex-row items-center gap-4 md:gap-12 z-10">
+      <!-- Main Copys -->
+      <div class="w-full md:w-1/2 flex flex-col text-center md:text-left">
+        <span class="font-jp text-dani-orange font-bold tracking-widest text-xs md:text-sm mb-2 md:mb-3 opacity-0 hero-fade">
+          旨味의 絶頂、ダニそば <span class="text-dani-cream/30">| 다니소바</span>
+        </span>
+        <!-- Reduced Title Font Size for a clean, moderately-sized premium look -->
+        <h1 class="font-outfit text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-normal tracking-normal text-dani-cream opacity-0 hero-fade">
+          단 한 입으로<br>
+          기억되는<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-dani-orange to-yellow-500 font-sans">감칠맛의 정점</span>
+        </h1>
+        <p class="mt-3 md:mt-6 text-[13px] sm:text-base text-dani-cream/70 font-light leading-relaxed max-w-md mx-auto md:mx-0 opacity-0 hero-fade">
+          72시간 숙성시킨 자가제면 위에 꾸덕하게 올려진 민찌 소스와 신선한 계란 노른자. 느끼함을 지우고 감칠맛만을 남긴 프리미엄 마제소바의 세계를 소개합니다.
+        </p>
+        <div class="mt-4 md:mt-8 flex flex-row gap-3 justify-center md:justify-start opacity-0 hero-fade">
+          <a href="#menu" class="px-4 sm:px-8 py-3 sm:py-4 bg-dani-cream text-dani-black hover:bg-dani-orange hover:text-dani-cream hover:shadow-neon-orange rounded-full font-bold text-xs sm:text-sm tracking-widest transition-all duration-300 text-center flex-1 sm:flex-none">
+            VIEW MENU
+          </a>
+          <a href="https://map.naver.com/p/search/%EB%8B%A4%EB%8B%88%EC%86%8C%EB%B0%94/place/1767231413" target="_blank" 
+             class="px-4 sm:px-8 py-3 sm:py-4 border border-dani-cream/20 hover:border-dani-orange hover:text-dani-orange rounded-full font-bold text-xs sm:text-sm tracking-widest transition-all duration-300 flex items-center justify-center gap-1.5 text-center flex-1 sm:flex-none">
+            FIND LOCATION
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Premium Visual Card -->
+      <div class="w-full md:w-1/2 flex justify-center opacity-0 hero-fade" id="hero-visual-container">
+        <div class="relative w-full max-w-[240px] sm:max-w-[320px] md:max-w-[360px] aspect-square bg-dani-card rounded-2xl border border-dani-cream/10 overflow-hidden shadow-2xl group p-3 flex items-center justify-center">
+          <!-- Glassmorphism Badge -->
+          <div class="absolute top-6 left-6 z-20 px-3 py-1.5 rounded-full bg-dani-black/70 backdrop-blur-md border border-dani-cream/15 text-[10px] sm:text-xs font-bold tracking-widest text-dani-orange shadow-neon-orange flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-dani-orange animate-ping"></span>
+            SIGNATURE PLATE
+          </div>
+          
+          <!-- Image -->
+          <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231028_278/1698473091338pQySi_JPEG/%C7%AE%C5%E4%C7%CE_%28%C4%AB%B6%F3%C0%CC%29_%B8%B6%C1%A6%BC%D2%B9%D9.jpg" 
+               alt="다니소바 시그니처 마제소바" 
+               class="w-full h-full object-cover rounded-xl transition-transform duration-[2000ms] ease-out group-hover:scale-105">
+               
+          <div class="absolute inset-x-3 bottom-3 top-1/2 bg-gradient-to-t from-dani-black via-transparent to-transparent z-10 opacity-80 rounded-b-xl"></div>
+          
+          <!-- Title overlay -->
+          <div class="absolute bottom-7 left-7 right-7 z-20">
+            <h3 class="font-bold text-base sm:text-lg text-dani-cream">풀토핑 마제소바</h3>
+            <p class="text-[10px] text-dani-cream/60 mt-1 font-light">비법 소스와 고명이 듬뿍 어우러진 시그니처 한 그릇</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <a href="#menu" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 text-dani-cream/40 hover:text-dani-orange transition-colors z-20">
+      <span class="text-[10px] font-outfit tracking-[0.25em]">SCROLL DOWN</span>
+      <div class="w-[1px] h-8 bg-dani-cream/20 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1/2 bg-dani-orange animate-scroll-indicator"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- Section 2: Menu Showdown (Horizontal Scroll) -->
+  <section id="menu" class="relative bg-dani-gray py-20 min-h-screen overflow-hidden">
+    <!-- Section Title -->
+    <div class="max-w-7xl mx-auto px-6 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <span class="text-xs font-outfit font-bold tracking-[0.25em] text-dani-orange block mb-2">MENU SHOWDOWN</span>
+        <h2 class="text-2xl sm:text-3xl md:text-[32px] font-bold tracking-tight text-dani-cream">다니소바 대표메뉴</h2>
+      </div>
+      <p class="text-sm text-dani-cream/60 max-w-sm font-light">
+        자가제면과 비법 양념이 빚어내는 다니소바의 시그니처 요리들을 가로 스크롤로 감상해 보세요.
+      </p>
+    </div>
+
+    <!-- Horizontal Scroll Pin Area -->
+    <div class="horizontal-scroll-container no-scrollbar">
+      <div class="horizontal-scroll-track flex px-6 md:px-12 gap-6 md:gap-8 items-stretch h-[540px] sm:h-[600px] md:h-[650px]">
+        
+        <!-- Menu Card 1: 풀토핑 마제소바 -->
+        <div class="menu-card flex-shrink-0 w-[300px] sm:w-[350px] md:w-[380px] bg-dani-black border border-dani-cream/10 rounded-2xl overflow-hidden hover:border-dani-orange hover:shadow-neon-orange transition-all duration-500 flex flex-col justify-between p-6">
+          <div>
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-dani-card border border-dani-cream/10 mb-4 p-2 flex items-center justify-center">
+              <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231028_278/1698473091338pQySi_JPEG/%C7%AE%C5%E4%C7%CE_%28%C4%AB%B6%F3%C0%CC%29_%B8%B6%C1%A6%BC%D2%B9%D9.jpg" 
+                   alt="풀토핑 마제소바" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="font-bold text-sm sm:text-base text-dani-cream">풀토핑 마제소바</h3>
+                <span class="font-jp text-[10px] text-dani-orange mt-0.5 block">フルトッピング まぜそば</span>
+              </div>
+            </div>
+            <p class="text-xs sm:text-[13px] text-dani-cream/70 font-light mt-4 leading-relaxed">
+              부드러운 차슈, 바삭한 김, 맛달걀까지 다니소바가 자랑하는 모든 명품 토핑을 한 그릇에 아낌없이 얹어낸 대표 시그니처 비빔라멘.
+            </p>
+          </div>
+          <div class="border-t border-dani-cream/10 pt-4 flex justify-between items-center text-[10px] tracking-wider text-dani-cream/50 uppercase">
+            <span>Signature Item</span>
+            <span class="text-dani-orange font-bold">★ 4.9 Reviews</span>
+          </div>
+        </div>
+
+        <!-- Menu Card 2: 코코넛 카레소바 -->
+        <div class="menu-card flex-shrink-0 w-[300px] sm:w-[350px] md:w-[380px] bg-dani-black border border-dani-cream/10 rounded-2xl overflow-hidden hover:border-dani-orange hover:shadow-neon-orange transition-all duration-500 flex flex-col justify-between p-6">
+          <div>
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-dani-card border border-dani-cream/10 mb-4 p-2 flex items-center justify-center">
+              <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231028_260/1698475318073b5v6Q_JPEG/%C7%AE%C5%E4%C7%CE_%C4%DA%C4%DA%B3%D3%C4%AB%B7%B9%BC%D2%B9%D9.jpg" 
+                   alt="코코넛 카레소바" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="font-bold text-sm sm:text-base text-dani-cream">코코넛 카레소바</h3>
+                <span class="font-jp text-[10px] text-dani-orange mt-0.5 block">ココナッツカレーそば</span>
+              </div>
+            </div>
+            <p class="text-xs sm:text-[13px] text-dani-cream/70 font-light mt-4 leading-relaxed">
+              은은하게 감도는 코코넛 밀크의 풍미와 특제 카레 양념이 어우러져 이국적이면서도 부드러운 감칠맛을 내는 이색 마제소바.
+            </p>
+          </div>
+          <div class="border-t border-dani-cream/10 pt-4 flex justify-between items-center text-[10px] tracking-wider text-dani-cream/50 uppercase">
+            <span>Special Edition</span>
+            <span class="text-dani-orange font-bold">★ 4.8 Reviews</span>
+          </div>
+        </div>
+
+        <!-- Menu Card 3: 다니카레 -->
+        <div class="menu-card flex-shrink-0 w-[300px] sm:w-[350px] md:w-[380px] bg-dani-black border border-dani-cream/10 rounded-2xl overflow-hidden hover:border-dani-orange hover:shadow-neon-orange transition-all duration-500 flex flex-col justify-between p-6">
+          <div>
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-dani-card border border-dani-cream/10 mb-4 p-2 flex items-center justify-center">
+              <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231028_279/1698475382891HNXLW_JPEG/%B4%D9%B4%CF%C4%AB%B6%B9.jpg" 
+                   alt="다니카레" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="font-bold text-sm sm:text-base text-dani-cream">다니카레</h3>
+                <span class="font-jp text-[10px] text-dani-orange mt-0.5 block">ダニカレー</span>
+              </div>
+            </div>
+            <p class="text-xs sm:text-[13px] text-dani-cream/70 font-light mt-4 leading-relaxed">
+              다니소바만의 숙성 비법을 카레에 녹여내어, 한국인의 입맛에 깊고 진한 맛을 선사하는 수제 일식 브라운 카레라이스.
+            </p>
+          </div>
+          <div class="border-t border-dani-cream/10 pt-4 flex justify-between items-center text-[10px] tracking-wider text-dani-cream/50 uppercase">
+            <span>Signature Item</span>
+            <span class="text-dani-orange font-bold">★ 4.8 Reviews</span>
+          </div>
+        </div>
+
+        <!-- Menu Card 4: 시그니처하이볼 ver.1 -->
+        <div class="menu-card flex-shrink-0 w-[300px] sm:w-[350px] md:w-[380px] bg-dani-black border border-dani-cream/10 rounded-2xl overflow-hidden hover:border-dani-orange hover:shadow-neon-orange transition-all duration-500 flex flex-col justify-between p-6">
+          <div>
+            <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-dani-card border border-dani-cream/10 mb-4 p-2 flex items-center justify-center">
+              <img src="./highball.jpg" 
+                   alt="시그니처하이볼 ver.1" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="font-bold text-sm sm:text-base text-dani-cream">시그니처하이볼 ver.1</h3>
+                <span class="font-jp text-[10px] text-dani-orange mt-0.5 block">アールグレイ燻製ハイボール</span>
+              </div>
+            </div>
+            <p class="text-xs sm:text-[13px] text-dani-cream/70 font-light mt-4 leading-relaxed">
+              그윽한 홍차 풍미의 얼그레이 하이볼을 베이스로, 시나몬 스틱의 그윽한 훈연향을 더해 독창적인 풍미를 선사하는 다니소바의 대표 시그니처 하이볼.
+            </p>
+          </div>
+          <div class="border-t border-dani-cream/10 pt-4 flex justify-between items-center text-[10px] tracking-wider text-dani-cream/50 uppercase">
+            <span>Perfect Pairing</span>
+            <span class="text-dani-orange font-bold">★ 4.7 Reviews</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section 3: Flavor Blueprint (How to Eat Redesigned) -->
+  <section id="howto" class="relative bg-dani-black py-24 border-b border-dani-cream/10">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-16">
+        <span class="text-xs font-outfit font-bold tracking-[0.25em] text-dani-orange block mb-2">FLAVOR BLUEPRINT</span>
+        <h2 class="text-2xl sm:text-3xl md:text-[32px] font-bold tracking-tight mb-4">마제소바 중독을 부르는 3단계 비법</h2>
+        <p class="text-xs sm:text-sm text-dani-cream/50 max-w-lg mx-auto font-light leading-relaxed">
+          마제소바의 참맛은 비벼지는 순간부터 완성됩니다. 마지막 한 숟갈까지 가장 완벽하게 감칠맛을 즐기는 다니소바 공식입니다.
+        </p>
+      </div>
+
+      <!-- 3 Steps Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Step 1 Card -->
+        <div class="group relative bg-dani-card border border-dani-cream/15 p-8 rounded-2xl card-hover-transition hover:border-dani-orange hover:shadow-neon-orange flex flex-col justify-between items-center text-center">
+          <!-- Large Background Step Number -->
+          <div class="absolute top-2 right-4 text-5xl font-outfit font-black text-dani-cream/[0.04] group-hover:text-dani-orange/[0.08] transition-colors duration-500 pointer-events-none">01</div>
+          
+          <div class="flex flex-col items-center">
+            <!-- SVG Illustration: Noodle Bowl & Chopsticks -->
+            <div class="w-16 h-16 my-2 text-dani-cream/40 group-hover:text-dani-orange transition-colors duration-500 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2" class="w-12 h-12">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2 10h20M4 10c0 5.523 4.477 10 10 10s10-4.477 10-10M12 4v4M8 5v3M16 5v3M7 10c0-1.5 1-2.5 2-2.5s2 1 2 2.5" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 3L8 14M21 4L9 15" class="group-hover:translate-y-1 group-hover:-translate-x-1 transition-transform duration-500" />
+              </svg>
+            </div>
+
+            <h3 class="font-bold text-base text-dani-cream mb-2 font-sans">오리지널의 정석 <span class="text-xs text-dani-orange font-normal font-jp block mt-1">混ぜる : 비비고, 느끼고</span></h3>
+            <p class="text-xs text-dani-cream/70 font-light leading-relaxed px-2">
+              계란 노른자를 톡 터뜨려 특제 소고기 민찌 양념과 신선한 파, 부추, 김가루가 72시간 숙성 자가제면에 완전히 스며들도록 골고루 잘 비벼 한 입 맛봅니다.
+            </p>
+          </div>
+
+          <!-- Witty Tip Box -->
+          <div class="mt-6 w-full bg-dani-black/50 border border-dani-orange/10 group-hover:border-dani-orange/30 p-3 rounded-xl transition-all duration-300 text-left">
+            <span class="text-[10px] font-bold text-dani-orange block mb-0.5">💡 다니소바's 센스 팁</span>
+            <p class="text-[11px] text-dani-cream/60 font-light leading-normal">
+              아무것도 넣지 않은 '순정' 상태로 드셔야 면발 본연의 쫄깃한 식감과 고소함을 온전히 느낄 수 있습니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 Card -->
+        <div class="group relative bg-dani-card border border-dani-cream/15 p-8 rounded-2xl card-hover-transition hover:border-dani-orange hover:shadow-neon-orange flex flex-col justify-between items-center text-center">
+          <!-- Large Background Step Number -->
+          <div class="absolute top-2 right-4 text-5xl font-outfit font-black text-dani-cream/[0.04] group-hover:text-dani-orange/[0.08] transition-colors duration-500 pointer-events-none">02</div>
+          
+          <div class="flex flex-col items-center">
+            <!-- SVG Illustration: Vinegar Bottle -->
+            <div class="w-16 h-16 my-2 text-dani-cream/40 group-hover:text-dani-orange transition-colors duration-500 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2" class="w-12 h-12">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6M10 3h4M10 3v4M14 3v4M8 7v13a2 2 0 002 2h4a2 2 0 002-2V7H8z" />
+                <circle cx="12" cy="11" r="1.5" fill="currentColor" class="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <path stroke-linecap="round" d="M12 14v2M12 18v1" class="group-hover:translate-y-1 transition-transform duration-500" />
+              </svg>
+            </div>
+
+            <h3 class="font-bold text-base text-dani-cream mb-2 font-sans">다시마 식초의 마법 <span class="text-xs text-dani-orange font-normal font-jp block mt-1">酢 : 산미의 터닝포인트</span></h3>
+            <p class="text-xs text-dani-cream/70 font-light leading-relaxed px-2">
+              면을 절반 정도 드신 후, 테이블에 구비된 다니소바 특제 수제 다시마 식초를 한 바퀴 슥 둘러보세요. 감칠맛의 깊이가 한층 달라집니다.
+            </p>
+          </div>
+
+          <!-- Witty Tip Box -->
+          <div class="mt-6 w-full bg-dani-black/50 border border-dani-orange/10 group-hover:border-dani-orange/30 p-3 rounded-xl transition-all duration-300 text-left">
+            <span class="text-[10px] font-bold text-dani-orange block mb-0.5">💡 다니소바's 센스 팁</span>
+            <p class="text-[11px] text-dani-cream/60 font-light leading-normal">
+              식초를 뿌리는 순간 '왜 진작 안 뿌렸지?' 하는 짜릿한 후회가 올 수 있으니 남은 면에 주저 없이 도전해보세요!
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 Card -->
+        <div class="group relative bg-dani-card border border-dani-cream/15 p-8 rounded-2xl card-hover-transition hover:border-dani-orange hover:shadow-neon-orange flex flex-col justify-between items-center text-center">
+          <!-- Large Background Step Number -->
+          <div class="absolute top-2 right-4 text-5xl font-outfit font-black text-dani-cream/[0.04] group-hover:text-dani-orange/[0.08] transition-colors duration-500 pointer-events-none">03</div>
+          
+          <div class="flex flex-col items-center">
+            <!-- SVG Illustration: Rice bowl and spoon -->
+            <div class="w-16 h-16 my-2 text-dani-cream/40 group-hover:text-dani-orange transition-colors duration-500 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2" class="w-12 h-12">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16M4 12c0 4.418 3.582 8 8 8s8-3.582 8-8" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12c0-2 2-3 4-3s3 1 4 2 2-2 4-2 2 1 2 3" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 8l5-5M18 4l2 2" />
+              </svg>
+            </div>
+
+            <h3 class="font-bold text-base text-dani-cream mb-2 font-sans">오이메시 피날레 <span class="text-xs text-dani-orange font-normal font-jp block mt-1">追い飯 : 밥 비벼 먹는 완벽한 마무리</span></h3>
+            <p class="text-xs text-dani-cream/70 font-light leading-relaxed px-2">
+              면을 다 드신 후 남은 양념에 무료로 제공되는 서비스 밥(오이메시)을 요청하여 슥슥 비벼보세요. 밥알 사이로 흐르는 꾸덕한 소스의 풍미를 끝까지 즐깁니다.
+            </p>
+          </div>
+
+          <!-- Witty Tip Box -->
+          <div class="mt-6 w-full bg-dani-black/50 border border-dani-orange/10 group-hover:border-dani-orange/30 p-3 rounded-xl transition-all duration-300 text-left">
+            <span class="text-[10px] font-bold text-dani-orange block mb-0.5">💡 다니소바's 센스 팁</span>
+            <p class="text-[11px] text-dani-cream/60 font-light leading-normal">
+              "사장님, 밥 주세요!"를 수줍게 외치고 남은 소스에 싹싹 비비면 마제소바 대장정의 완벽한 피날레가 완성됩니다.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Real Proof (Review Ticker with Blog reviews) -->
+  <section id="reviews" class="relative bg-dani-black border-y border-dani-cream/10 py-24 overflow-hidden">
+    <!-- Section Title -->
+    <div class="max-w-7xl mx-auto px-6 mb-16 text-center">
+      <span class="text-xs font-outfit font-bold tracking-[0.25em] text-dani-orange block mb-2">REAL PROOF</span>
+      <h2 class="text-2xl sm:text-3xl md:text-[32px] font-bold tracking-tight text-dani-cream">방문자 영수증 & 블로그 리뷰</h2>
+      <p class="text-xs sm:text-sm text-dani-cream/50 mt-4 max-w-lg mx-auto font-light text-center">
+        다니소바 방문객들이 직접 작성해주신 네이버 플레이스 영수증 후기 및 생생한 네이버 블로그 포스팅 모음입니다.
+      </p>
+    </div>
+
+    <!-- Ticker Row 1 (Left to Right) - Receipt Reviews -->
+    <div class="ticker-container flex overflow-hidden w-full mb-6">
+      <div class="ticker-track-left flex gap-6 whitespace-nowrap">
+        <!-- Card 1 -->
+        <div class="ticker-card inline-flex flex-col justify-center bg-dani-card border border-dani-cream/10 px-8 py-6 rounded-xl w-[320px] sm:w-[380px]">
+          <div class="flex items-center gap-1.5 mb-2 text-dani-orange text-xs">
+            <span>★★★★★</span>
+            <span class="text-dani-cream/30">|</span>
+            <span class="text-dani-cream/60">영수증 인증 b***o</span>
+          </div>
+          <p class="text-xs sm:text-[13px] font-light text-dani-cream leading-relaxed whitespace-normal">
+            "인생 마제소바를 드디어 찾았습니다! 면발이 정말 쫄깃하고 비법 양념소스 감칠맛이 최고예요."
+          </p>
+        </div>
+        <!-- Card 2 -->
+        <div class="ticker-card inline-flex flex-col justify-center bg-dani-card border border-dani-cream/10 px-8 py-6 rounded-xl w-[320px] sm:w-[380px]">
+          <div class="flex items-center gap-1.5 mb-2 text-dani-orange text-xs">
+            <span>★★★★★</span>
+            <span class="text-dani-cream/30">|</span>
+            <span class="text-dani-cream/60">영수증 인증 j***a</span>
+          </div>
+          <p class="text-xs sm:text-[13px] font-light text-dani-cream leading-relaxed whitespace-normal">
+            "마지막에 다시마 식초 둘러 먹으면 완전 신세계! 남은 양념에 밥 비벼 먹는 오이메시는 꼭 드세요."
+          </p>
+        </div>
+        <!-- Card 3 -->
+        <div class="ticker-card inline-flex flex-col justify-center bg-dani-card border border-dani-cream/10 px-8 py-6 rounded-xl w-[320px] sm:w-[380px]">
+          <div class="flex items-center gap-1.5 mb-2 text-dani-orange text-xs">
+            <span>★★★★★</span>
+            <span class="text-dani-cream/30">|</span>
+            <span class="text-dani-cream/60">영수증 인증 s***o</span>
+          </div>
+          <p class="text-xs sm:text-[13px] font-light text-dani-cream leading-relaxed whitespace-normal">
+            "의왕역 부근 숨은 보석 같은 맛집 인증! 인테리어도 정갈해서 혼밥하기에도 분위기가 딱입니다."
+          </p>
+        </div>
+        <!-- Card 4 -->
+        <div class="ticker-card inline-flex flex-col justify-center bg-dani-card border border-dani-cream/10 px-8 py-6 rounded-xl w-[320px] sm:w-[380px]">
+          <div class="flex items-center gap-1.5 mb-2 text-dani-orange text-xs">
+            <span>★★★★★</span>
+            <span class="text-dani-cream/30">|</span>
+            <span class="text-dani-cream/60">영수증 인증 r***w</span>
+          </div>
+          <p class="text-xs sm:text-[13px] font-light text-dani-cream leading-relaxed whitespace-normal">
+            "꾸덕꾸덕한 소고기 양념과 노른자의 궁합... 마지막 밥 한 숟갈까지 물리지 않고 너무 맛있어요!"
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ticker Row 2 (Right to Left) - Blog Reviews -->
+    <div class="ticker-container flex overflow-hidden w-full">
+      <div class="ticker-track-right flex gap-6 whitespace-nowrap">
+        <!-- Blog Card 1 -->
+        <a href="https://map.naver.com/p/search/%EB%8B%A4%EB%8B%88%EC%86%8C%EB%B0%94/place/1767231413?placePath=/review" target="_blank" 
+           class="ticker-card inline-flex flex-col justify-center bg-dani-card border border-dani-orange/30 px-8 py-6 rounded-xl w-[320px] sm:w-[380px] hover:border-dani-orange transition-all duration-300">
+          <div class="flex items-center justify-between mb-2 text-xs">
+            <span class="text-dani-orange font-bold">Naver Blog</span>
+            <span class="text-dani-cream/40">블로거 *하님</span>
+          </div>
+          <h4 class="font-bold text-xs sm:text-sm text-dani-cream truncate mb-1">"의왕 삼동 다니소바, 드디어 다시 오픈하네요!"</h4>
+          <p class="text-[11px] sm:text-xs font-light text-dani-cream/70 leading-relaxed whitespace-normal">
+            기다렸던 의왕 1호점 복귀 소식ㅠㅠ 광교점에서 맛보던 그 진한 소스와 쫄깃한 자가제면을 다시 동네에서 먹을 수 있다니 너무 행복합니다.
+          </p>
+        </a>
+        <!-- Blog Card 2 -->
+        <a href="https://map.naver.com/p/search/%EB%8B%A4%EB%8B%88%EC%86%8C%EB%B0%94/place/1767231413?placePath=/review" target="_blank" 
+           class="ticker-card inline-flex flex-col justify-center bg-dani-card border border-dani-orange/30 px-8 py-6 rounded-xl w-[320px] sm:w-[380px] hover:border-dani-orange transition-all duration-300">
+          <div class="flex items-center justify-between mb-2 text-xs">
+            <span class="text-dani-orange font-bold">Naver Blog</span>
+            <span class="text-dani-cream/40">블로거 *미님</span>
+          </div>
+          <h4 class="font-bold text-xs sm:text-sm text-dani-cream truncate mb-1">"다니소바 솔직후기 - 마제소바 소스에 식초는 사기 조합"</h4>
+          <p class="text-[11px] sm:text-xs font-light text-dani-cream/70 leading-relaxed whitespace-normal">
+            절반쯤 먹었을 때 특제 다시마 식초 뿌려먹는 건 필수예요. 감칠맛이 2배로 폭발합니다! 마지막 오이메시 서비스 밥까지 비벼서 싹싹 긁어먹었네요.
+          </p>
+        </a>
+        <!-- Blog Card 3 -->
+        <a href="https://map.naver.com/p/search/%EB%8B%A4%EB%8B%88%EC%86%8C%EB%B0%94/place/1767231413?placePath=/review" target="_blank" 
+           class="ticker-card inline-flex flex-col justify-center bg-dani-card border border-dani-orange/30 px-8 py-6 rounded-xl w-[320px] sm:w-[380px] hover:border-dani-orange transition-all duration-300">
+          <div class="flex items-center justify-between mb-2 text-xs">
+            <span class="text-dani-orange font-bold">Naver Blog</span>
+            <span class="text-dani-cream/40">블로거 *민님</span>
+          </div>
+          <h4 class="font-bold text-xs sm:text-sm text-dani-cream truncate mb-1">"의왕역 다니소바 마제소바 존맛집! 밥 비벼 먹는 감동..."</h4>
+          <p class="text-[11px] sm:text-xs font-light text-dani-cream/70 leading-relaxed whitespace-normal">
+            풀토핑 마제소바 고기 양념이 다른 프랜차이즈랑 다르게 깊은 맛이 나요. 면 다 먹고 밥 요청하면 공짜로 주는 것도 완전 마음에 듭니다.
+          </p>
+        </a>
+        <!-- Blog Card 4 -->
+        <a href="https://map.naver.com/p/search/%EB%8B%A4%EB%8B%88%EC%86%8C%EB%B0%94/place/1767231413?placePath=/review" target="_blank" 
+           class="ticker-card inline-flex flex-col justify-center bg-dani-card border border-dani-orange/30 px-8 py-6 rounded-xl w-[320px] sm:w-[380px] hover:border-dani-orange transition-all duration-300">
+          <div class="flex items-center justify-between mb-2 text-xs">
+            <span class="text-dani-orange font-bold">Naver Blog</span>
+            <span class="text-dani-cream/40">블로거 *훈님</span>
+          </div>
+          <h4 class="font-bold text-xs sm:text-sm text-dani-cream truncate mb-1">"인생 마제소바 등극! 코코넛 카레소바도 강추합니다."</h4>
+          <p class="text-[11px] sm:text-xs font-light text-dani-cream/70 leading-relaxed whitespace-normal">
+            코코넛 향이 향긋하게 감도는 코코넛 카레소바 완전 취향 저격입니다. 시그니처 하이볼이랑 같이 마시니까 개운하고 끝까지 맛있게 넘어가요.
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Contact & Action -->
+  <section id="contact" class="relative bg-dani-gray py-24 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
+      
+      <!-- Store Info Description -->
+      <div class="w-full lg:w-1/2 flex flex-col">
+        <span class="text-xs font-outfit font-bold tracking-[0.25em] text-dani-orange mb-3">LOCATION & HOURS</span>
+        <h2 class="text-2xl sm:text-3xl md:text-[32px] font-bold tracking-tight text-dani-cream">다니소바 의왕점</h2>
+        <span class="text-xs font-bold text-dani-orange border border-dani-orange/30 px-2 py-0.5 rounded self-start mt-4 tracking-widest uppercase">
+          Reopening June 2026 / 1호점 복귀
+        </span>
+        
+        <p class="text-xs sm:text-sm text-dani-cream/70 font-light leading-relaxed mt-6">
+          기존에 임시 휴무 상태였던 의왕 1호점이 6월을 맞이하여 다시 영업을 개시합니다. 정갈한 다찌 테이블과 정성이 담긴 음식으로 고객님을 맞이하겠습니다.
+        </p>
+
+        <!-- Information details list (with contact phone added) -->
+        <div class="mt-8 space-y-4 border-t border-b border-dani-cream/10 py-6 text-xs sm:text-sm">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-1.5">
+            <span class="w-24 text-dani-cream/50 font-bold uppercase tracking-wider">주소</span>
+            <span class="text-dani-cream">경기 의왕시 삼동 745 1층</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center gap-1.5">
+            <span class="w-24 text-dani-cream/50 font-bold uppercase tracking-wider">전화번호</span>
+            <a href="tel:0507-1472-3417" class="text-dani-orange hover:underline font-semibold">0507-1472-3417</a>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center gap-1.5">
+            <span class="w-24 text-dani-cream/50 font-bold uppercase tracking-wider">영업시간</span>
+            <span class="text-dani-cream">매일 11:00 ~ 21:00</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center gap-1.5">
+            <span class="w-24 text-dani-cream/50 font-bold uppercase tracking-wider">휴게시간</span>
+            <span class="text-dani-cream">15:30 ~ 17:00 (Last Order: 점심 15:00 / 저녁 20:30)</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center gap-1.5">
+            <span class="w-24 text-dani-cream/50 font-bold uppercase tracking-wider">휴무일</span>
+            <span class="text-dani-cream text-dani-orange">매주 일요일 정기 휴무</span>
+          </div>
+        </div>
+
+        <!-- Neon CTA to Naver map (real waitlist removed) -->
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="https://map.naver.com/p/search/%EB%8B%A4%EB%8B%88%EC%86%8C%EB%B0%94/place/1767231413" target="_blank" 
+             id="btn-naver-map"
+             class="px-8 py-4 border border-dani-orange text-dani-orange hover:bg-dani-orange hover:text-dani-black hover:shadow-neon-orange font-bold text-sm text-center tracking-widest rounded-lg transition-all duration-300 w-full sm:w-auto">
+            네이버 지도로 길찾기
+          </a>
+          <a href="https://www.instagram.com/danis0ba/" target="_blank"
+             id="btn-instagram"
+             class="px-8 py-4 border border-dani-cream/20 text-dani-cream/80 hover:border-dani-orange hover:text-dani-orange hover:shadow-neon-orange font-bold text-sm text-center tracking-widest rounded-lg transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4.5 h-4.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            공식 인스타그램 (@danis0ba)
+          </a>
+        </div>
+      </div>
+
+      <!-- Store Interior Photos Slider / Gallery -->
+      <div class="w-full lg:w-1/2 flex flex-col gap-4">
+        <div class="relative w-full aspect-[16/10] max-h-[200px] sm:max-h-[280px] md:max-h-[340px] bg-dani-card rounded-2xl border border-dani-cream/10 overflow-hidden group flex items-center justify-center p-3 shadow-2xl">
+          <img id="gallery-main-img" 
+               src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_144/1698415065721Rol0t_JPEG/IMG_9083.jpeg" 
+               alt="다니소바 매장 분위기" 
+               class="max-w-full max-h-full object-contain rounded-xl transition-all duration-500">
+          <div class="absolute bottom-6 right-6 bg-dani-black/80 backdrop-blur-md px-3 py-1.5 rounded text-xs font-bold text-dani-orange border border-dani-orange/20 z-10 shadow-lg">
+            INTERIOR & MOOD
+          </div>
+        </div>
+        <!-- Thumbnail Controls -->
+        <div id="gallery-thumbs-container" class="grid grid-cols-5 gap-2">
+          <!-- Button 1 (Active by default) -->
+          <button onclick="changeGallery(0)" class="aspect-square bg-dani-card border border-dani-orange rounded-lg overflow-hidden relative cursor-pointer focus:outline-none">
+            <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_144/1698415065721Rol0t_JPEG/IMG_9083.jpeg" class="w-full h-full object-cover opacity-100 transition-opacity" alt="썸네일 1">
+          </button>
+          <!-- Button 2 -->
+          <button onclick="changeGallery(1)" class="aspect-square bg-dani-card border border-dani-cream/10 rounded-lg overflow-hidden relative cursor-pointer focus:outline-none hover:border-dani-orange transition-colors">
+            <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_119/16984149581103mXGu_JPEG/IMG_9126.jpeg" class="w-full h-full object-cover opacity-50 hover:opacity-100 transition-opacity" alt="썸네일 2">
+          </button>
+          <!-- Button 3 -->
+          <button onclick="changeGallery(2)" class="aspect-square bg-dani-card border border-dani-cream/10 rounded-lg overflow-hidden relative cursor-pointer focus:outline-none hover:border-dani-orange transition-colors">
+            <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_154/1698385801201IWXAk_JPEG/P20231026_170226026_E6360E96-7FEB-48F6-A5A9-541652FCDADE.jpg" class="w-full h-full object-cover opacity-50 hover:opacity-100 transition-opacity" alt="썸네일 3">
+          </button>
+          <!-- Button 4 -->
+          <button onclick="changeGallery(3)" class="aspect-square bg-dani-card border border-dani-cream/10 rounded-lg overflow-hidden relative cursor-pointer focus:outline-none hover:border-dani-orange transition-colors">
+            <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_213/1698385803474D9Eme_JPEG/P20231026_173155246_C5E1F189-52EE-418C-B47A-574A3D386976.jpg" class="w-full h-full object-cover opacity-50 hover:opacity-100 transition-opacity" alt="썸네일 4">
+          </button>
+          <!-- Button 5 -->
+          <button onclick="changeGallery(4)" class="aspect-square bg-dani-card border border-dani-cream/10 rounded-lg overflow-hidden relative cursor-pointer focus:outline-none hover:border-dani-orange transition-colors">
+            <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_282/1698385807605GvxSV_JPEG/P20231026_182559175_63D2A9C9-B27A-4418-804E-F175F918F056.jpg" class="w-full h-full object-cover opacity-50 hover:opacity-100 transition-opacity" alt="썸네일 5">
+          </button>
+          <!-- Button 6 -->
+          <button onclick="changeGallery(5)" class="aspect-square bg-dani-card border border-dani-cream/10 rounded-lg overflow-hidden relative cursor-pointer focus:outline-none hover:border-dani-orange transition-colors">
+            <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_229/1698385805631sJWqy_JPEG/P20231026_175206719_81CAFAC0-F232-4A95-92FE-32D4BCAC9A17.jpg" class="w-full h-full object-cover opacity-50 hover:opacity-100 transition-opacity" alt="썸네일 6">
+          </button>
+          <!-- Button 7 -->
+          <button onclick="changeGallery(6)" class="aspect-square bg-dani-card border border-dani-cream/10 rounded-lg overflow-hidden relative cursor-pointer focus:outline-none hover:border-dani-orange transition-colors">
+            <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_235/1698385801233fs50o_JPEG/P20231026_171542396_78AC1E5C-68E5-4180-BCBC-5A2D425AB723.jpg" class="w-full h-full object-cover opacity-50 hover:opacity-100 transition-opacity" alt="썸네일 7">
+          </button>
+          <!-- Button 8 -->
+          <button onclick="changeGallery(7)" class="aspect-square bg-dani-card border border-dani-cream/10 rounded-lg overflow-hidden relative cursor-pointer focus:outline-none hover:border-dani-orange transition-colors">
+            <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_203/1698385801276cF6Ec_JPEG/P20231026_172000874_A52D2FB6-FAF8-42FC-9378-F3061315313A.jpg" class="w-full h-full object-cover opacity-50 hover:opacity-100 transition-opacity" alt="썸네일 8">
+          </button>
+          <!-- Button 9 -->
+          <button onclick="changeGallery(8)" class="aspect-square bg-dani-card border border-dani-cream/10 rounded-lg overflow-hidden relative cursor-pointer focus:outline-none hover:border-dani-orange transition-colors">
+            <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_299/1698385805308iIuNA_JPEG/P20231026_180905767_00B9E831-3E0D-4DAB-AE0D-CFB3E9022577.jpg" class="w-full h-full object-cover opacity-50 hover:opacity-100 transition-opacity" alt="썸네일 9">
+          </button>
+          <!-- Button 10 -->
+          <button onclick="changeGallery(9)" class="aspect-square bg-dani-card border border-dani-cream/10 rounded-lg overflow-hidden relative cursor-pointer focus:outline-none hover:border-dani-orange transition-colors">
+            <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_64/16983858034075Pe1J_JPEG/P20231026_172740540_E262BB89-0386-4C0D-A3BD-861BE2F6CF6C.jpg" class="w-full h-full object-cover opacity-50 hover:opacity-100 transition-opacity" alt="썸네일 10">
+          </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 6: Franchise Registration Info (New) -->
+  <section id="franchise" class="relative bg-dani-black py-24 px-6 md:px-12 border-t border-dani-cream/10">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-xs font-outfit font-bold tracking-[0.25em] text-dani-orange block mb-2">FRANCHISE INQUIRY</span>
+      <h2 class="text-2xl sm:text-3xl md:text-[32px] font-bold tracking-tight text-dani-cream">다니소바 가맹점 등록 안내</h2>
+      
+      <p class="text-sm sm:text-base text-dani-cream/70 font-light leading-relaxed mt-6 max-w-2xl mx-auto">
+        다니소바의 독창적인 레시피와 체계적인 다이닝 바 브랜딩 시스템으로 요식업 창업을 시작해 보세요. 타협하지 않는 맛의 깊이와 정갈한 브랜딩을 전국 예비 지점주님들과 함께 공유하고자 합니다.
+      </p>
+
+      <div class="mt-12 bg-dani-card border border-dani-cream/10 p-8 rounded-2xl max-w-xl mx-auto shadow-2xl">
+        <h3 class="font-bold text-lg text-dani-cream mb-4">가맹 상담 및 등록 문의</h3>
+        <p class="text-xs sm:text-sm text-dani-cream/60 leading-relaxed mb-6 font-light">
+          가맹 개설 조건, 상권 분석, 인테리어 무드 컨셉 및 교육 일정 등에 대한 상세한 상담이 가능합니다.
+        </p>
+        
+        <!-- Calling CTA with phone link -->
+        <a href="tel:0507-1472-3417" 
+           class="inline-flex items-center gap-3 px-8 py-4 bg-dani-orange text-dani-black hover:bg-dani-cream hover:text-dani-black hover:shadow-neon-orange font-bold text-sm tracking-widest rounded-lg transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 01-7.108-7.108c-.145-.44.02-927-.387-.387l1.293-.97c.361-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+          </svg>
+          전화 문의: 0507-1472-3417
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dani-black border-t border-dani-cream/10 py-12 px-6 md:px-12 text-center text-xs text-dani-cream/40">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex flex-col items-center md:items-start gap-2">
+        <span class="font-outfit font-extrabold text-lg text-dani-cream tracking-widest">DANISOBA</span>
+        <p class="font-light">© 2026 DANISOBA. All Rights Reserved. | Tel: 0507-1472-3417</p>
+      </div>
+      <div class="flex gap-6 tracking-widest uppercase font-semibold">
+        <a href="#hero" class="hover:text-dani-orange transition-colors">TOP</a>
+        <a href="https://map.naver.com/p/search/%EB%8B%A4%EB%8B%88%EC%86%8C%EB%B0%94/place/1767231413" target="_blank" class="hover:text-dani-orange transition-colors">NAVER PLACE</a>
+        <a href="https://www.instagram.com/danis0ba/" target="_blank" class="hover:text-dani-orange transition-colors">INSTAGRAM</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Gallery Controls Script -->
+  <script>
+    const galleryImages = [
+      "https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_144/1698415065721Rol0t_JPEG/IMG_9083.jpeg",
+      "https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_119/16984149581103mXGu_JPEG/IMG_9126.jpeg",
+      "https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_154/1698385801201IWXAk_JPEG/P20231026_170226026_E6360E96-7FEB-48F6-A5A9-541652FCDADE.jpg",
+      "https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_213/1698385803474D9Eme_JPEG/P20231026_173155246_C5E1F189-52EE-418C-B47A-574A3D386976.jpg",
+      "https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_282/1698385807605GvxSV_JPEG/P20231026_182559175_63D2A9C9-B27A-4418-804E-F175F918F056.jpg",
+      "https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_229/1698385805631sJWqy_JPEG/P20231026_175206719_81CAFAC0-F232-4A95-92FE-32D4BCAC9A17.jpg",
+      "https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_235/1698385801233fs50o_JPEG/P20231026_171542396_78AC1E5C-68E5-4180-BCBC-5A2D425AB723.jpg",
+      "https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_203/1698385801276cF6Ec_JPEG/P20231026_172000874_A52D2FB6-FAF8-42FC-9378-F3061315313A.jpg",
+      "https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_299/1698385805308iIuNA_JPEG/P20231026_180905767_00B9E831-3E0D-4DAB-AE0D-CFB3E9022577.jpg",
+      "https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231027_64/16983858034075Pe1J_JPEG/P20231026_172740540_E262BB89-0386-4C0D-A3BD-861BE2F6CF6C.jpg"
+    ];
+
+    function changeGallery(index) {
+      const mainImg = document.getElementById('gallery-main-img');
+      if (index >= 0 && index < galleryImages.length) {
+        mainImg.src = galleryImages[index];
+      }
+      
+      const container = document.getElementById('gallery-thumbs-container');
+      if (container) {
+        const buttons = container.children;
+        for (let i = 0; i < buttons.length; i++) {
+          if (i === index) {
+            buttons[i].className = "aspect-square bg-dani-card border border-dani-orange rounded-lg overflow-hidden relative cursor-pointer focus:outline-none";
+            buttons[i].querySelector('img').className = "w-full h-full object-cover opacity-100 transition-opacity duration-300";
+          } else {
+            buttons[i].className = "aspect-square bg-dani-card border border-dani-cream/10 rounded-lg overflow-hidden relative cursor-pointer focus:outline-none hover:border-dani-orange transition-colors duration-300";
+            buttons[i].querySelector('img').className = "w-full h-full object-cover opacity-50 hover:opacity-100 transition-opacity duration-300";
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- GSAP Animation Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
