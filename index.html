@@ -50,12 +50,11 @@
   </script>
 
   <!-- Custom Base Stylesheet Link -->
-  <link rel="stylesheet" href="style.css?v=1.0.1">
+  <link rel="stylesheet" href="style.css?v=1.0.2">
   
-  <!-- GSAP & ScrollTrigger & Lenis CDN -->
+  <!-- GSAP & ScrollTrigger CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
 </head>
 <body class="bg-dani-bg text-dani-text font-sans overflow-x-hidden antialiased">
 
@@ -121,54 +120,24 @@
     <!-- Soft radial glowing backdrop -->
     <div class="absolute w-[600px] h-[600px] rounded-full bg-dani-accent/[0.04] blur-[120px] pointer-events-none z-0"></div>
 
-    <div class="max-w-5xl w-full flex flex-col md:flex-row items-center gap-4 md:gap-12 z-10">
-      <!-- Main Copys -->
-      <div class="w-full md:w-1/2 flex flex-col text-center md:text-left">
-        <span class="font-jp text-dani-accent font-bold tracking-widest text-xs md:text-sm mb-2 md:mb-3 opacity-0 hero-fade">
-          旨味의 絶頂、ダニそば <span class="text-dani-text/30">| 다니소바</span>
-        </span>
-        <!-- Reduced Title Font Size for a clean, moderately-sized premium look -->
-        <h1 class="font-outfit text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-normal tracking-normal text-dani-text opacity-0 hero-fade">
-          단 한 입으로<br>
-          기억되는<br>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-dani-accent to-amber-800 font-sans">감칠맛의 정점</span>
-        </h1>
-        <p class="mt-3 md:mt-6 text-[13px] sm:text-base text-dani-text/75 font-light leading-relaxed max-w-md mx-auto md:mx-0 opacity-0 hero-fade">
-          72시간 숙성시킨 자가제면 위에 꾸덕하게 올려진 민찌 소스와 신선한 계란 노른자. 느끼함을 지우고 감칠맛만을 남긴 프리미엄 마제소바의 세계를 소개합니다.
-        </p>
-        <div class="mt-4 md:mt-8 flex flex-row gap-3 justify-center md:justify-start opacity-0 hero-fade">
-          <a href="#menu" class="px-4 sm:px-8 py-3 sm:py-4 bg-dani-text text-dani-bg hover:bg-dani-accent hover:text-dani-bg hover:shadow-wood-accent-shadow rounded-full font-bold text-xs sm:text-sm tracking-widest transition-all duration-300 text-center flex-1 sm:flex-none">
-            VIEW MENU
-          </a>
-          <a href="https://map.naver.com/p/search/%EB%8B%A4%EB%8B%88%EC%86%8C%EB%B0%94/place/1767231413" target="_blank" 
-             class="px-4 sm:px-8 py-3 sm:py-4 border border-dani-border text-dani-text hover:border-dani-accent hover:text-dani-accent rounded-full font-bold text-xs sm:text-sm tracking-widest transition-all duration-300 flex items-center justify-center gap-1.5 text-center flex-1 sm:flex-none">
-            FIND LOCATION
-          </a>
-        </div>
-      </div>
-
-      <!-- Hero Premium Visual Card -->
-      <div class="w-full md:w-1/2 flex justify-center opacity-0 hero-fade" id="hero-visual-container">
-        <div class="relative w-full max-w-[240px] sm:max-w-[320px] md:max-w-[360px] aspect-square bg-dani-card rounded-2xl border border-dani-border overflow-hidden shadow-wood-shadow group p-3 flex items-center justify-center">
-          <!-- Glassmorphism Badge -->
-          <div class="absolute top-6 left-6 z-20 px-3 py-1.5 rounded-full bg-dani-bg/85 backdrop-blur-md border border-dani-border text-[10px] sm:text-xs font-bold tracking-widest text-dani-accent shadow-wood-shadow flex items-center gap-1.5">
-            <span class="w-1.5 h-1.5 rounded-full bg-dani-accent animate-ping"></span>
-            SIGNATURE PLATE
-          </div>
-          
-          <!-- Image -->
-          <img src="https://search.pstatic.net/common/?src=https://ldb-phinf.pstatic.net/20231028_278/1698473091338pQySi_JPEG/%C7%AE%C5%E4%C7%CE_%28%C4%AB%B6%F3%C0%CC%29_%B8%B6%C1%A6%BC%D2%B9%D9.jpg" 
-               alt="다니소바 시그니처 마제소바" 
-               class="w-full h-full object-cover rounded-xl transition-transform duration-[2000ms] ease-out group-hover:scale-105">
-               
-          <div class="absolute inset-x-3 bottom-3 top-1/2 bg-gradient-to-t from-dani-text/80 via-transparent to-transparent z-10 opacity-80 rounded-b-xl"></div>
-          
-          <!-- Title overlay -->
-          <div class="absolute bottom-7 left-7 right-7 z-20">
-            <h3 class="font-bold text-base sm:text-lg text-dani-bg">풀토핑 마제소바</h3>
-            <p class="text-[10px] text-dani-bg/60 mt-1 font-light">비법 소스와 고명이 듬뿍 어우러진 시그니처 한 그릇</p>
-          </div>
-        </div>
+    <div class="max-w-4xl w-full flex flex-col items-center justify-center text-center z-10 px-4">
+      <span class="font-jp text-dani-accent font-bold tracking-widest text-xs md:text-sm mb-3 md:mb-4 opacity-0 hero-fade">
+        旨味의 絶頂、ダニそば <span class="text-dani-text/30">| 다니소바</span>
+      </span>
+      <h1 class="font-outfit text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug tracking-tight text-dani-text max-w-3xl opacity-0 hero-fade">
+        단 한 입으로 기억되는 <span class="text-transparent bg-clip-text bg-gradient-to-r from-dani-accent to-amber-800 font-sans">감칠맛의 정점</span>
+      </h1>
+      <p class="mt-4 md:mt-6 text-sm sm:text-base md:text-lg text-dani-text/75 font-light leading-relaxed max-w-2xl mx-auto opacity-0 hero-fade">
+        72시간 숙성시킨 자가제면 위에 꾸덕하게 올려진 민찌 소스와 신선한 계란 노른자. 느끼함을 지우고 감칠맛만을 남긴 프리미엄 마제소바의 세계를 소개합니다.
+      </p>
+      <div class="mt-6 md:mt-10 flex flex-row gap-4 justify-center w-full max-w-xs sm:max-w-md opacity-0 hero-fade">
+        <a href="#menu" class="px-6 sm:px-10 py-3.5 sm:py-4 bg-dani-text text-dani-bg hover:bg-dani-accent hover:text-dani-bg hover:shadow-wood-accent-shadow rounded-full font-bold text-xs sm:text-sm tracking-widest transition-all duration-300 text-center flex-1">
+          VIEW MENU
+        </a>
+        <a href="https://map.naver.com/p/search/%EB%8B%A4%EB%8B%88%EC%86%8C%EB%B0%94/place/1767231413" target="_blank" 
+           class="px-6 sm:px-10 py-3.5 sm:py-4 border border-dani-border text-dani-text hover:border-dani-accent hover:text-dani-accent rounded-full font-bold text-xs sm:text-sm tracking-widest transition-all duration-300 flex items-center justify-center gap-1.5 text-center flex-1">
+          FIND LOCATION
+        </a>
       </div>
     </div>
 
@@ -721,6 +690,6 @@
   </script>
 
   <!-- GSAP Animation Scripts -->
-  <script src="app.js"></script>
+  <script src="app.js?v=1.0.1"></script>
 </body>
 </html>
