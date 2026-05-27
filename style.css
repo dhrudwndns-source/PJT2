@@ -9,21 +9,21 @@ body, h1, h2, h3, h4, h5, h6, p, a, span {
   position: fixed;
   width: 20px;
   height: 20px;
-  background-color: #FF5722;
+  border: 2px solid #9E472A;
+  background-color: transparent;
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  mix-blend-mode: difference;
-  transition: width 0.2s, height 0.2s, background-color 0.2s;
-  box-shadow: 0 0 10px #FF5722, 0 0 20px #FF5722;
+  transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
+  box-shadow: 0 0 10px rgba(158, 71, 42, 0.15);
 }
 
 #custom-cursor.hovered {
-  width: 40px;
-  height: 40px;
-  background-color: #F9F6F0;
-  box-shadow: 0 0 15px #F9F6F0;
+  width: 36px;
+  height: 36px;
+  border-color: #2C2520;
+  background-color: rgba(44, 37, 32, 0.08);
 }
 
 /* Custom Scrollbar */
@@ -33,17 +33,17 @@ body, h1, h2, h3, h4, h5, h6, p, a, span {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B0B0A;
+  background: #F6F3EC;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1A1A18;
-  border: 2px solid #0B0B0A;
+  background: #DFD9CE;
+  border: 2px solid #F6F3EC;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF5722;
+  background: #9E472A;
 }
 
 /* Neon Glow Button & Hover Effects */
@@ -107,14 +107,11 @@ body, h1, h2, h3, h4, h5, h6, p, a, span {
   scrollbar-width: none;  /* Firefox */
 }
 
-/* Styled Floating Japanese Characters (Kyoto Neon Outline Style) */
+/* Styled Floating Japanese Characters (Subtle Washi Watermark) */
 .floating-neon-char {
   font-family: 'Noto Serif JP', serif;
   font-weight: 900;
-  color: #FF5722; /* theme orange-red */
-  -webkit-text-stroke: 1.5px #F9F6F0; /* theme cream */
-  paint-order: stroke fill;
-  text-shadow: 0 0 8px rgba(255, 87, 34, 0.3);
+  color: #E8E2D5; /* very soft warm cream paper watermark */
   position: absolute;
   user-select: none;
   pointer-events: none;
