@@ -33,48 +33,12 @@ if (cursor) {
 // ----------------------------------------------------
 window.addEventListener('DOMContentLoaded', () => {
   const heroTL = gsap.timeline();
-  
-  // Stagger fade-in the 10 background Japanese character elements to an ambient opacity of 0.14
-  heroTL.fromTo('.floating-neon-char',
-    { opacity: 0, scale: 0.7, y: 30 },
-    { opacity: 0.14, scale: 1, y: 0, duration: 1.8, stagger: 0.1, ease: "power2.out" }
-  );
 
   // Other components fade in
   heroTL.fromTo('.hero-fade',
     { opacity: 0, y: 30 },
-    { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: "power3.out" },
-    "-=1.5"
+    { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: "power3.out" }
   );
-  
-  // Infinite subtle drifting & breathing animations for background full words
-  const floatingLetters = document.querySelectorAll('.floating-neon-char');
-  floatingLetters.forEach((letter, index) => {
-    // Unique drift distances and rotation angles based on index
-    const yMove = 15 + (index % 3) * 6;
-    const xMove = 12 - (index % 2) * 8;
-    const rotChange = 4 + (index % 3) * 3;
-    
-    // Slow organic drifting
-    gsap.to(letter, {
-      y: `+=${yMove}`,
-      x: `-=${xMove}`,
-      rotation: `+=${rotChange}`,
-      duration: 8 + index * 1.5,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut"
-    });
-    
-    // Breathing opacity (ranging around 0.14 ambient value, e.g. from 0.08 to 0.22)
-    gsap.to(letter, {
-      opacity: 0.22,
-      duration: 4 + index * 1.2,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut"
-    });
-  });
 });
 
 // ----------------------------------------------------
