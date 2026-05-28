@@ -1,9 +1,10 @@
 /* Global Text Word-Break for Korean & Wood Background */
 body {
-  background-image: url('hinoki_grain.png');
+  background-image: linear-gradient(to bottom, rgba(20, 21, 23, 0.94), rgba(20, 21, 23, 0.94)), url('hinoki_grain.png');
   background-repeat: repeat;
   background-size: 600px;
   background-attachment: scroll;
+  background-color: #141517;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, a, span {
@@ -16,21 +17,21 @@ body, h1, h2, h3, h4, h5, h6, p, a, span {
   position: fixed;
   width: 20px;
   height: 20px;
-  border: 2px solid #9E472A;
+  border: 2px solid #D35E35;
   background-color: transparent;
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
   transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
-  box-shadow: 0 0 10px rgba(158, 71, 42, 0.15);
+  box-shadow: 0 0 10px rgba(211, 94, 53, 0.15);
 }
 
 #custom-cursor.hovered {
   width: 36px;
   height: 36px;
-  border-color: #2C2520;
-  background-color: rgba(44, 37, 32, 0.08);
+  border-color: #ECE5DC;
+  background-color: rgba(236, 229, 220, 0.08);
 }
 
 /* Custom Scrollbar */
@@ -40,17 +41,17 @@ body, h1, h2, h3, h4, h5, h6, p, a, span {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F6F3EC;
+  background: #141517;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #DFD9CE;
-  border: 2px solid #F6F3EC;
+  background: #3A312A;
+  border: 2px solid #141517;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9E472A;
+  background: #D35E35;
 }
 
 /* Neon Glow Button & Hover Effects */
@@ -118,7 +119,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span {
 .floating-neon-char {
   font-family: 'Noto Serif JP', serif;
   font-weight: 900;
-  color: #E8E2D5; /* very soft warm cream paper watermark */
+  color: #242220; /* extremely subtle dark charcoal wood watermark */
   position: absolute;
   user-select: none;
   pointer-events: none;
