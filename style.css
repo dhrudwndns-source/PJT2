@@ -1,10 +1,10 @@
 /* Global Text Word-Break for Korean & Wood Background */
 body {
-  background-image: linear-gradient(to bottom, rgba(37, 23, 12, 0.62), rgba(37, 23, 12, 0.62)), url('hinoki_grain.png');
+  background-image: url('hinoki_grain.png');
   background-repeat: repeat;
   background-size: 600px;
   background-attachment: scroll;
-  background-color: #66462C;
+  background-color: #5C3A21;
   background-blend-mode: multiply;
 }
 
@@ -42,12 +42,12 @@ body, h1, h2, h3, h4, h5, h6, p, a, span {
 }
 
 ::-webkit-scrollbar-track {
-  background: #231811;
+  background: #2E1E14;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #574134;
-  border: 2px solid #231811;
+  background: #5C3A21;
+  border: 2px solid #2E1E14;
   border-radius: 10px;
 }
 
