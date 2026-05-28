@@ -1,6 +1,6 @@
 /* Global Text Word-Break for Korean & Wood Background */
 body {
-  background-color: #1F150F;
+  background-color: #150E0A;
 }
 
 body::before {
@@ -15,7 +15,7 @@ body::before {
   background-repeat: repeat;
   background-size: 600px;
   background-attachment: scroll;
-  filter: brightness(0.45) contrast(2.1) saturate(1.4) sepia(0.15);
+  filter: brightness(0.28) contrast(3.0) saturate(1.5) sepia(0.12);
   pointer-events: none;
 }
 
